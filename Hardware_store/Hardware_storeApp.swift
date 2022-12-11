@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct Hardware_storeApp: App {
+    @StateObject var listVM = ListViewModel(service: APIServiceList())
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ListView(viewModel: listVM)
         }
     }
 }

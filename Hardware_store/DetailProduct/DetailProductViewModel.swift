@@ -13,6 +13,7 @@ final class DetailProductViewModel: ObservableObject {
     @Published var state: State
     
     enum State {
+        case initial
         case loading
         case failure
         case loaded(Product)
@@ -21,11 +22,20 @@ final class DetailProductViewModel: ObservableObject {
     init(productID: Int, service: DetailProductService) {
         self.service = service
         self.productID = productID
-        self.state = State.loading
+        self.state = .initial
+    }
+    
+    func onAppear() {
+        if case .loaded = state {
+            return
+        }
+        
         load()
     }
     
-    func load() {
+    private func load() {
+        state = .loading
+        
         Task {
             do {
                 let product = try await service.load(id: self.productID)

@@ -9,17 +9,17 @@ import SwiftUI
 
 
 struct ProductListRowView: View {
-    let product: ListViewModel.ListProduct
-  
+    private enum Constants {
+        static let currency = "$"
+    }
+    private let product: ListViewModel.ListProduct
     
-    
-    private let currency = "$"
+    init(product: ListViewModel.ListProduct) {
+        self.product = product
+    }
     
     var body: some View {
         HStack {
-        VStack {
-            Text("\(product.title)")
-                .font(.largeTitle)
             AsyncImage(url: URL(string: product.thumbnail), content: { image in
                 image
                     .resizable()
@@ -27,32 +27,23 @@ struct ProductListRowView: View {
             }, placeholder: {
                 ProgressView()
             })
-//                .frame(width: 100, height: 100)
-//                .clipShape(Rectangle())
-                .shadow(radius: 10)
-            Text("\(product.description)")
-                .lineLimit(2)
-                .font(.subheadline)
+            .frame(width:64, height: 64)
             
-        }
+            VStack(alignment: .leading) {
+                Text("\(product.title)")
+                    .lineLimit(1)
+                    .font(.title3)
+                Text("\(product.description)")
+                    .lineLimit(2)
+                    .font(.subheadline)
+            }
             Spacer()
             VStack {
-                Text("\(product.price)" + currency)
+                Text("\(product.price)" + Constants.currency)
                 Text("\(product.rating)")
-                
             }
-            
         }
-        
-        
-        
     }
-    
-//    var itemImage: some View {
-//        AsyncImage(url: URL(string: product.thumbnail))
-//
-//    }
-    
 }
 
 struct ProductListRow_Previews: PreviewProvider {

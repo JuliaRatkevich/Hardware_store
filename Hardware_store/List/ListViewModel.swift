@@ -31,11 +31,15 @@ final class ListViewModel: ObservableObject {
         self.state = .initial
     }
     
-    func load() {
+    func onAppear() {
         if case .loading = state {
             return
         }
         
+        load()
+    }
+    
+    private func load() {
         state = .loading
         
         Task {

@@ -19,7 +19,7 @@ struct ListView: View {
         case .initial:
             Text("")
                 .onAppear {
-                    viewModel.load()
+                    viewModel.onAppear()
                 }
         case .loading:
             LoadingView()
@@ -36,7 +36,6 @@ struct ListView: View {
                     }
                 }
                 .navigationTitle("Items")
-                .padding(.leading)
                 .listStyle(.plain)
             }
         }

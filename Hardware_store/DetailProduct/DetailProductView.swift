@@ -10,7 +10,6 @@ import SwiftUI
 struct DetailProductView: View {
     @ObservedObject private var viewModel: DetailProductViewModel
     
-//    let product: Product
     private let currency = "$"
     
     init(viewModel: DetailProductViewModel) {

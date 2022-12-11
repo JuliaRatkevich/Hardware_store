@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class APIDetailProductService: DetailProductService {
+final class DetailProductServiceAPI: DetailProductService {
     enum APIError: Error {
         case invalidURL
         case invalidRespoce
@@ -16,7 +16,6 @@ final class APIDetailProductService: DetailProductService {
     func load(id: Int) async throws -> Product {
         guard let url = URL(string: "https://dummyjson.com/products/\(id)") else {
             throw APIError.invalidURL
-            
         }
         
         let (data, response) = try await URLSession.shared.data(from: url)
@@ -26,10 +25,5 @@ final class APIDetailProductService: DetailProductService {
         let decoder = JSONDecoder()
         let model = try decoder.decode(Product.self, from: data)
         return model
-        
     }
-    
 }
-    
-    
-

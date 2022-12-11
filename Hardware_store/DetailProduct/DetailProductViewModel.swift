@@ -16,10 +16,7 @@ final class DetailProductViewModel: ObservableObject {
         case loading
         case failure
         case loaded(Product)
-        
     }
-    
-    
     
     init(productID: Int, service: DetailProductService) {
         self.service = service

@@ -16,11 +16,11 @@
 		4E6D80D829294E4E0051CE08 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6D80D729294E4E0051CE08 /* Product.swift */; };
 		4E6D80DA292953CD0051CE08 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6D80D9292953CD0051CE08 /* ListViewModel.swift */; };
 		4E6D80DC292953F80051CE08 /* ListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6D80DB292953F80051CE08 /* ListService.swift */; };
-		4E6D80DF2929557D0051CE08 /* APIServiceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6D80DE2929557D0051CE08 /* APIServiceList.swift */; };
+		4E6D80DF2929557D0051CE08 /* ListServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6D80DE2929557D0051CE08 /* ListServiceAPI.swift */; };
 		4E6D80E429295F4B0051CE08 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6D80E329295F4B0051CE08 /* ListView.swift */; };
 		4E6D80E6292E7D270051CE08 /* ProductListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6D80E5292E7D270051CE08 /* ProductListRowView.swift */; };
 		4E6D80E8292E96100051CE08 /* DetailProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6D80E7292E96100051CE08 /* DetailProductService.swift */; };
-		4E6D80EA292E96C00051CE08 /* APIDetailProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6D80E9292E96C00051CE08 /* APIDetailProductService.swift */; };
+		4E6D80EA292E96C00051CE08 /* DetailProductServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6D80E9292E96C00051CE08 /* DetailProductServiceAPI.swift */; };
 		4E6D80ED2930E90F0051CE08 /* DetailProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6D80EC2930E90F0051CE08 /* DetailProductViewModel.swift */; };
 		4E6D80EF2930F2390051CE08 /* DetailProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6D80EE2930F2390051CE08 /* DetailProductView.swift */; };
 		4E6D80F22931320C0051CE08 /* FailureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6D80F12931320C0051CE08 /* FailureView.swift */; };
@@ -57,11 +57,11 @@
 		4E6D80D729294E4E0051CE08 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		4E6D80D9292953CD0051CE08 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		4E6D80DB292953F80051CE08 /* ListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListService.swift; sourceTree = "<group>"; };
-		4E6D80DE2929557D0051CE08 /* APIServiceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceList.swift; sourceTree = "<group>"; };
+		4E6D80DE2929557D0051CE08 /* ListServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListServiceAPI.swift; sourceTree = "<group>"; };
 		4E6D80E329295F4B0051CE08 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		4E6D80E5292E7D270051CE08 /* ProductListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRowView.swift; sourceTree = "<group>"; };
 		4E6D80E7292E96100051CE08 /* DetailProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductService.swift; sourceTree = "<group>"; };
-		4E6D80E9292E96C00051CE08 /* APIDetailProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDetailProductService.swift; sourceTree = "<group>"; };
+		4E6D80E9292E96C00051CE08 /* DetailProductServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductServiceAPI.swift; sourceTree = "<group>"; };
 		4E6D80EC2930E90F0051CE08 /* DetailProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductViewModel.swift; sourceTree = "<group>"; };
 		4E6D80EE2930F2390051CE08 /* DetailProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductView.swift; sourceTree = "<group>"; };
 		4E6D80F12931320C0051CE08 /* FailureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailureView.swift; sourceTree = "<group>"; };
@@ -119,6 +119,7 @@
 				4E6D80F0293131F40051CE08 /* Views */,
 				4E6D80EB2930E8AC0051CE08 /* DetailProduct */,
 				4E6D80D629294DF20051CE08 /* List */,
+				4E6D80DD2929540C0051CE08 /* Service */,
 				4E6D80D529294DE10051CE08 /* Models */,
 				4E6D80AB29294C8B0051CE08 /* Hardware_storeApp.swift */,
 				4E6D80AF29294C8E0051CE08 /* Assets.xcassets */,
@@ -166,7 +167,6 @@
 				4E6D80E329295F4B0051CE08 /* ListView.swift */,
 				4E6D80E5292E7D270051CE08 /* ProductListRowView.swift */,
 				4E6D80D9292953CD0051CE08 /* ListViewModel.swift */,
-				4E6D80DD2929540C0051CE08 /* Service */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -175,9 +175,9 @@
 			isa = PBXGroup;
 			children = (
 				4E6D80DB292953F80051CE08 /* ListService.swift */,
-				4E6D80DE2929557D0051CE08 /* APIServiceList.swift */,
+				4E6D80DE2929557D0051CE08 /* ListServiceAPI.swift */,
 				4E6D80E7292E96100051CE08 /* DetailProductService.swift */,
-				4E6D80E9292E96C00051CE08 /* APIDetailProductService.swift */,
+				4E6D80E9292E96C00051CE08 /* DetailProductServiceAPI.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -334,8 +334,8 @@
 				4E6D80ED2930E90F0051CE08 /* DetailProductViewModel.swift in Sources */,
 				4E6D80E6292E7D270051CE08 /* ProductListRowView.swift in Sources */,
 				4E6D80E8292E96100051CE08 /* DetailProductService.swift in Sources */,
-				4E6D80EA292E96C00051CE08 /* APIDetailProductService.swift in Sources */,
-				4E6D80DF2929557D0051CE08 /* APIServiceList.swift in Sources */,
+				4E6D80EA292E96C00051CE08 /* DetailProductServiceAPI.swift in Sources */,
+				4E6D80DF2929557D0051CE08 /* ListServiceAPI.swift in Sources */,
 				4E6D80E429295F4B0051CE08 /* ListView.swift in Sources */,
 				4E6D80F22931320C0051CE08 /* FailureView.swift in Sources */,
 				4E6D80EF2930F2390051CE08 /* DetailProductView.swift in Sources */,

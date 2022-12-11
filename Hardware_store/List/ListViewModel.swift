@@ -16,23 +16,28 @@ final class ListViewModel: ObservableObject {
         let rating: String
         let thumbnail: String
     }
-    private let service: ListService
-    @Published var state: State
-    
     enum State {
+        case initial
         case loading
         case failure
         case loaded([ListProduct])
     }
     
+    private let service: ListService
+    @Published private(set) var state: State
+    
     init(service: ListService) {
         self.service = service
-        self.state = State.loading
-        load()
+        self.state = .initial
     }
     
-    
     func load() {
+        if case .loading = state {
+            return
+        }
+        
+        state = .loading
+        
         Task {
             do {
                 let products = try await service.load()
@@ -41,25 +46,17 @@ final class ListViewModel: ObservableObject {
                                 title: product.title,
                                 description: product.description,
                                 price: product.price,
-                                rating: String(format: "%.1f\\%.0f", product.rating, product.totalRating),
+                                rating: String(format: "%.1f", product.rating),
                                 thumbnail: product.thumbnail)
                 }
                 DispatchQueue.main.async {
                     self.state = State.loaded(listProducts)
                 }
-            
             } catch {
-                print(error)
                 DispatchQueue.main.async {
                     self.state = State.failure
                 }
             }
         }
     }
-    
-    
-//    func schortRating(rating:Double) -> Double {
-//        let shorTating =
-//    }
 }
-

@@ -12,7 +12,6 @@ struct FailureView: View {
         VStack {
             Text("❌")
             Text("The server cannot find the requested resource")
-            
         }
     }
 }

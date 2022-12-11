@@ -7,12 +7,11 @@
 
 import Foundation
 
-final class APIServiceList: ListService {
+final class ListServiceAPI: ListService {
     enum APIError: Error {
         case invalidURL
         case invalidRespoce
     }
-    
     
     func load() async throws -> [Product] {
         guard let url = URL(string: "https://dummyjson.com/products") else {
@@ -26,8 +25,5 @@ final class APIServiceList: ListService {
         let decoder = JSONDecoder()
         let model = try decoder.decode(ListItem.self, from: result.0)
         return model.products
-        
     }
-    
-    
 }

@@ -7,8 +7,6 @@
 
 import Foundation
 
-
 protocol ListService {
     func load() async throws -> [Product]
-    
 }

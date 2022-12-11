@@ -46,7 +46,16 @@ struct ListView: View {
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
-        let view = ListView(viewModel: ListViewModel(service: ListServiceAPI()))
+        let view = ListView(viewModel: ListViewModel(service: FakeService()))
         return view
+    }
+    
+    class FakeService: ListService {
+        func load() async throws -> [Product] {
+            [
+                Product(id: 1, title: "Product#1", description: "Good item", price: 12, discountPercentage: 3.3, rating: 2.4, stock: 1, brand: "Brand", category: "Cat", thumbnail: "thumb", images: []),
+                Product(id: 2, title: "Product#2", description: "Bad product", price: 123456, discountPercentage: 3.3, rating: 0.4, stock: 1, brand: "Brand", category: "Cat", thumbnail: "thumb", images: [])
+            ]
+        }
     }
 }
